@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Example</title>
+</head>
+<body>
+  <h1>System Updates</h1>
+  <div id="update"></div>
+
+  <script>
+    var seconds=0;
+    const up=document.getElementById("update");
+    var clear= setInterval(function(){
+        up.innerHTML="update by 1 sec "+seconds;
+        seconds++;        
+        if(seconds>1200){
+            clearInterval(clear);
+            up.innerHTML="Syestem has stopped";
+        }
+    },1000);
+  </script>
+</body>
+</html>
